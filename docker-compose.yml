@@ -1,0 +1,70 @@
+version: '3.9'
+services:
+    
+  web01:
+    build:
+      context: ./html
+    image: web01
+    container_name: web01
+    restart: always
+    tty: true
+    networks:
+      - ac-network
+
+  servermails:
+    build: ./server-mails
+    image: servermails
+    container_name: servermails
+    ports:
+      - "25:25/tcp"
+      - "587:587/tcp"
+      - "143:143/tcp"
+    networks:
+      - ac-network
+
+  webmail:
+    build:
+      context: ./webmail
+    image: webmail
+    container_name: webmail
+    restart: always
+    tty: true
+    volumes:
+      - ./webmail/rainloop:/var/www/html/rainloop
+    depends_on:
+      - servermails
+    networks:
+      - ac-network
+
+  proxy:
+    build:
+      context: ./proxy
+    image: proxy
+    container_name: proxy
+    restart: always
+    tty: true
+    ports:
+      - "80:80"
+    depends_on:
+      - web01
+      - webmail
+    networks:
+      - ac-network
+
+  dns:
+    build: ./dns
+    image: dns
+    container_name: ns1
+    restart: always
+    tty: true
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    volumes:
+      - ./dns/primary:/etc/bind
+    networks:
+      - ac-network
+
+networks:
+  ac-network:
+    driver: bridge

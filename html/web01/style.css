@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(28, 29, 30);
+    padding: 10px;
+    border: 2px solid white;
+    margin: auto;
+    border-radius: 5px;
+    color: white;
+    max-width: 1350px;
+}
+
+#title {
+    text-align: center;
+}
+
+.prititle {
+    text-align: left;
+    font-family: 'Times New Roman';
+    font-size: large;
+}
+
+.instzero, .instdois {
+    font-family: Verdana;
+    padding-top: 12px;
+}
+
+.zerox, .doisx {
+    font-size: 19px;
+    font-family: 'Times New Roman';
+}
+
+.llink {
+    font-family: Verdana;
+    padding-top: 40px;
+    font-size: 17px;
+    font-weight: bold;
+}
