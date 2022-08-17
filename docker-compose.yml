@@ -3,7 +3,7 @@ services:
     
   web01:
     build:
-      context: ./html
+      context: ./web
     image: web01
     container_name: web01
     restart: always
@@ -17,8 +17,11 @@ services:
     container_name: servermails
     ports:
       - "25:25/tcp"
-      - "587:587/tcp"
+      - "100:100/tcp"
       - "143:143/tcp"
+      - "587:587/tcp"
+      - "993:993/tcp"
+      - "995:995/tcp"
     networks:
       - ac-network
 

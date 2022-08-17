@@ -23,8 +23,6 @@ COPY /imap_dovecot/dovecot.conf /etc/dovecot/dovecot.conf
 
 COPY /smtp_postfix/main.cf /etc/postfix/main.cf
 
-EXPOSE 25
-EXPOSE 143
-EXPOSE 587
+EXPOSE 25 110 143 993 995
 
 CMD tail -F /dev/null

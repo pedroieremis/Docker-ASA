@@ -1,14 +1,14 @@
 ## DNS - BIND9  :globe_with_meridians:
 
-Nesta pasta está alocado os arquivos de configuração para o dns primário. Nosso domínio é __ac.asa.br__.
+Nesta pasta está alocado os arquivos de configuração para o dns primário. O domínio é __ac.asa.br__.
 
 ---
 
 ### Instruções de uso:
 
-Os arquivos **db.ac.asa.br**, **db.reverse.ac.asa.br**, são os de configurações de nomes, a partir de sua zona. O arquivos **named.conf.default-zones** é o de configuração das zones, direta e reversa. O **named.conf.options** é o que dá possibilidade de encaminhamento de pesquisa dns. O **named.conf**  é o principal, pois é quem inclui as configurações das zonas. E os demais arqiuvos são mais padrões do bind9, o root de pesquisa recursiva e o outro de dados locais.
+Os arquivos **db.ac.asa.br**, **db.reverse.ac.asa.br**, são os de configurações de nomes, a partir de sua zona. O arquivos **named.conf.default-zones** é o de configuração das zonas, direta e reversa. O **named.conf.options** é o que dá possibilidade de encaminhamento de pesquisa dns. O **named.conf**  é o principal, pois é quem inclui as configurações das zonas. E os demais arquivos são mais padrões do bind9, o root de pesquisa recursiva e o outro de dados locais.
 
-Caso deseja mudar as zonas, o domínio, basta que mude o que tem **ac.asa.br** por seu domínio desejado.
+Caso queira mudar as zonas, o domínio, basta que mude o que tem **ac.asa.br** por seu domínio desejado.
 
 ---
 
@@ -60,6 +60,4 @@ Caso deseja mudar as zonas, o domínio, basta que mude o que tem **ac.asa.br** p
   nslookup ac.asa.br
   ```
 
-Você também poderá usa-lo como dns pela internet, coo o IP setado na máquina, tente navegar na internet, certamente funcionará tudo ok, pois há todo um encaminhamento para a resolução de nomes.
-
-
+Você também poderá usa-lo como dns pela internet, com o IP setado na máquina, tente navegar na internet, certamente funcionará tudo ok, pois há todo um encaminhamento para a resolução de nomes.
