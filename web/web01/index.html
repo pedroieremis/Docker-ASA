@@ -2,48 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Teste_Docker</title>
+    <title>AC.ASA.BR - WEB 01</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://icongr.am/devicon/docker-original.svg?size=128&color=currentColor">
 </head>
 <body>
 
     <header>
-        <h1 id="title">PARABÉNS!! ESTE É O HTML PARA SUBIR COM DOCKER!</h1>
+        <h1 id="title">Olá! Este é o site principal do projeto final de Pedro Iéremis.</h1>
     </header>
 
-    <section>
-        <header class="prititle">
-            <h2>Instruções básicas de passos a mais para seguir se desejar...</h2>
-        </header>
+    <div class="text">
+        <p>Você deve estar aqui, se da maneira ideal, foi usando o DNS e o PROXY da infraestrutura.<br>
+            Sendo o acesso por "ac.asa.br", também por "www.ac.asa.br", no diretório "/", que é onde você encontra.<br>
+            Aqui há esta página principal, já no diretório "rainloop", ou seja, "www.ac.asa.br/rainloop" estará o WEBMAIL.
+        </p>
+    </div>
 
-        <section>
-            <header class="instzero">
-                <p>
-                    <h3><li>docker build -t "nome_para_imagem" .</li></h3>
-                </p>
-            </header>
-            <section class="zerox"> 
-                <p>"-t": Para nomear a imagem | "nome_para_imagem": Você que define | "." Referente ao diretório atual</p>
-            </section>
-        </section>
-
-        <section>
-            <header class="instdois">
-                <p>
-                    <h3><li>docker run --name "nome_para_container" --rm -d -p "porta_desejada":80 "nome_da_sua_imagem"</li></h3>
-                </p>
-            </header>
-            <section class="doisx">
-                <p>"nome_container": Você que define | "--rm": Para remover container automaticamente após parar execução</p>
-                <p>"-d": Para executar em Background (Não impedindo o prompt)</p>
-                <p>"-p": Mapeamento de portas | "porta_desejada": Você define. Local | "80": Porta da nginx. Container | "nome_da_sua_imagem": Você definiu anteriormente</p>
-            </section>
-        </section>
-            
-        <section class="llink">
-            <p>Ou use de forma mais simples e rápida sem o build - docker run -d -p 80:80 nginx</p>
-            <p>E por fim, acesse: localhost - Ou seu IP</p>
-            <p>Por padrão o navegador usa a porta 80</p>
-        </section>
-    </section>
+    <div class="images">
+        <img src="https://cdn.icon-icons.com/icons2/3405/PNG/512/services_dns_icon_216293.png" height="300px"/>
+        <img src="https://cdn.icon-icons.com/icons2/3408/PNG/512/proxy_server_icon_216955.png" height="300px"/>
+    </div>
 </body>

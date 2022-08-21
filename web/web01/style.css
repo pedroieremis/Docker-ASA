@@ -12,25 +12,17 @@ body {
     text-align: center;
 }
 
-.prititle {
-    text-align: left;
-    font-family: 'Times New Roman';
+.text {
+    text-align: center;
+    font-family: Verdana;
     font-size: large;
+    padding-top: 1px;
+    font-weight: 10px;
 }
 
-.instzero, .instdois {
-    font-family: Verdana;
-    padding-top: 12px;
-}
-
-.zerox, .doisx {
-    font-size: 19px;
-    font-family: 'Times New Roman';
-}
-
-.llink {
-    font-family: Verdana;
-    padding-top: 40px;
-    font-size: 17px;
-    font-weight: bold;
+.images {
+    text-align: center;
+    background-color: cadetblue;
+    border: 2px white solid;
+    height: 300px;
 }
