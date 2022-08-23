@@ -15,6 +15,7 @@ RUN apt-get upgrade -y
 
 COPY process_server_00.sh .
 RUN ./process_server_00.sh
+COPY users.sh .
 
 COPY /imap_dovecot/10-auth.conf /etc/dovecot/conf.d/10-auth.conf
 COPY /imap_dovecot/10-mail.conf /etc/dovecot/conf.d/10-mail.conf
@@ -22,9 +23,6 @@ COPY /imap_dovecot/10-master.conf /etc/dovecot/conf.d/10-master.conf
 COPY /imap_dovecot/dovecot.conf /etc/dovecot/dovecot.conf
 
 COPY /smtp_postfix/main.cf /etc/postfix/main.cf
-
-COPY ./users/passwd /etc/passwd
-COPY ./users/shadow /etc/shadow
 
 EXPOSE 25 110 143 993 995
 
