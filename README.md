@@ -4,14 +4,27 @@
 
 Repositório para o projeto final da disciplina ASA, como arquivos de configuração, scripts de automatização, programas etc. Tudo isso para a implementação de serviços usando containers Docker.
 
-###### Para obter o repositório na sua máquina:
+__Siga os Passos Abaixo:__
+
+Para clonar o repositório na sua máquina local:
 
 ```shell
-git clone https://github.com/PedroIeremis/ASA.git
+git clone https://github.com/PedroIeremis/Docker-ASA.git
+```
 
-cd ASA
+Navegue até a pasta:
+```shell
+cd Docker-ASA/
+```
 
+Para visualizar:
+```shell
 ls ou dir 
+```
+
+Subiir a Infraestrutura:
+```shell
+./up-services.sh
 ```
 
 ___Dicas:___
