@@ -1,10 +1,9 @@
 #!/bin/bash
 
-echo "Senha para usuário pedro"
-adduser -q --gecos " " pedro
+adduser -q --disabled-password --gecos " " pedro
+adduser -q --disabled-password --gecos " " ieremis
+adduser -q --disabled-password --gecos " " sales
 
-echo "Senha para usuário ieremis"
-adduser -q --gecos " " ieremis
-
-echo "Senha para usuário sales"
-adduser -q --gecos " " sales
+usermod -p $(openssl passwd -1 123@senha) -s /bin/bash pedro
+usermod -p $(openssl passwd -1 123@senha) -s /bin/bash ieremis
+usermod -p $(openssl passwd -1 123@senha) -s /bin/bash sales

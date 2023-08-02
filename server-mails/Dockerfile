@@ -1,6 +1,8 @@
 #Dockerfile para SMTP e IMAP
 FROM ubuntu:latest
 
+WORKDIR /dir
+
 RUN apt-get update \
     && apt-get install -y \
     postfix \
@@ -9,13 +11,14 @@ RUN apt-get update \
     iputils-ping \
     net-tools \
     telnet \
+    openssl \
     nano
 
 RUN apt-get upgrade -y
 
-COPY process_server_00.sh .
-RUN ./process_server_00.sh
 COPY users.sh .
+RUN chmod +x users.sh
+RUN bash users.sh
 
 COPY /imap_dovecot/10-auth.conf /etc/dovecot/conf.d/10-auth.conf
 COPY /imap_dovecot/10-mail.conf /etc/dovecot/conf.d/10-mail.conf

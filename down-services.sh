@@ -1,12 +1,6 @@
 #!/bin/bash
 
-docker-compose down
-
-docker rm -f ns1
-docker rm -f servermails
-docker rm -f proxy
-docker rm -f webmail
-docker rm -f web01
+docker compose down
 
 docker rmi -f dns
 docker rmi -f servermails

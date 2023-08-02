@@ -15,7 +15,8 @@ while test $op != 0; do
 	echo "7 - Delete image"
 	echo "8 - Delete volumes not in use"
 	echo "9 - Delete other container"
-	echo "Option> " ; read op
+	echo
+	read -p "Option > " op
 	echo
 	case $op in
 	0)
@@ -27,8 +28,7 @@ while test $op != 0; do
 	3)
 		docker images;;
 	4)
-		echo "1 - stop | 2 - restart | 3 - start"
-		read func
+		read -p "1 - stop | 2 - restart | 3 - start" func
 		case $func in
 		1)
 			docker exec ns1 /etc/init.d/named stop;;
@@ -42,16 +42,16 @@ while test $op != 0; do
 	5)
 		docker exec ns1 named -g;;
 	6)
-		echo "Name of container> " ; read name
+		read -p "Name of container > " name
 		docker inspect $name;;
 	7)
-		echo "Name of image> " ; read named
+		read -p "Name of image > " named
 		docker rmi -f $named;;
 	8)
 		docker volume prune -f;;
 
 	9)
-		echo "Name of container> " ; read name
+		read -p "Name of container > " name
                 docker rm -f $name;;
 	*)
 		echo "Invalid option"

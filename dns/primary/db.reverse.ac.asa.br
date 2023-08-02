@@ -10,9 +10,7 @@ $TTL	604800
 ;
 @	IN	NS	ac.asa.br.
 @	IN	NS	ns1.ac.asa.br.
-;@	IN	NS	ns2.ac.asa.br.
 
 reverse1	IN	PTR	ac.asa.br
 reverse1	IN	PTR	ns1
 reverse1	IN	PTR	mail
-;reverse2	IN	PTR	ns2

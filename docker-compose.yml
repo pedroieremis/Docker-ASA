@@ -12,7 +12,8 @@ services:
       - ac-network
 
   servermails:
-    build: ./server-mails
+    build: 
+      context: ./server-mails
     image: servermails
     container_name: servermails
     ports:
@@ -55,7 +56,8 @@ services:
       - ac-network
 
   dns:
-    build: ./dns
+    build: 
+      context: ./dns
     image: dns
     container_name: ns1
     restart: always
